@@ -1,6 +1,7 @@
 <template>
   <div class="hello-route">
       <h1>{{msg}}</h1>
+      <router-link to="/">Go to Homepage</router-link>
   </div>
 </template>
 
