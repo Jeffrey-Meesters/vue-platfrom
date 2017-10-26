@@ -64,7 +64,4 @@ export default {
     top: -100px;
 }
 
-.star:hover {
-    transform: scale(2)
-}
 </style>
