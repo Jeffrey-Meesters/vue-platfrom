@@ -26,6 +26,7 @@ export default {
     position: absolute;
     animation: rotate 5s infinite linear;
     height: 50px;
+    width: 50px;
 }
 
 @keyframes rotate {
@@ -39,15 +40,15 @@ export default {
 }
 
 .box-one {
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     background-color: red;
     position: relative;
 }
 
 .box-two {
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     transform: rotate(120deg);
     background-color: red;
     position: relative;
@@ -55,11 +56,15 @@ export default {
 }
 
 .box-three {
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     transform: rotate(240deg);
     background-color: red;
     position: relative;
     top: -100px;
+}
+
+.star:hover {
+    transform: scale(2)
 }
 </style>

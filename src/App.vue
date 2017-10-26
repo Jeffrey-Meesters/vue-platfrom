@@ -25,6 +25,16 @@ export default {
 </script>
 
 <style scoped>
+
+a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .index-nav {
   background-color: #374c6e;
   color: #fff;
