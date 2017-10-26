@@ -2,7 +2,7 @@
   <div id="app">
     <nav>
         <ul class="index-nav">
-            <li class="index-list-item">
+            <li class="logo">
                 <i class="fa fa-superpowers" aria-hidden="true"></i>
             </li>
             <li class="index-list-item is-active"><router-link to="/" class="index-link">Home</router-link></li>
@@ -24,14 +24,7 @@ export default {
 }
 </script>
 
-<style>
-html,
-body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+<style scoped>
 .index-nav {
   background-color: #374c6e;
   color: #fff;
@@ -40,17 +33,33 @@ body {
   list-style: none;
   text-decoration: none;
   margin: 0;
-  height: 50px;
-  padding: 0 2rem;
+  height: 75px;
+  padding: 0px;
 }
 
+.logo,
 .index-list-item {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
+  width: 100px;
   transition: 0.5s;
+  font-size: 1.25rem;
+}
+
+.logo {
+  animation: rotate 3s infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .index-list-item:hover {
@@ -67,7 +76,7 @@ body {
 
 .fa-superpowers {
   color: #a65353;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .index-link {
