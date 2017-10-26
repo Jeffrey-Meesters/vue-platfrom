@@ -1,7 +1,6 @@
 <template>
   <div class="hello-route">
       <h1>{{msg}}</h1>
-      <router-link to="/">Go to Homepage</router-link>
   </div>
 </template>
 
@@ -14,8 +13,6 @@ export default {
     }
   }
 }
-</script>
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
