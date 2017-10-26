@@ -55,7 +55,7 @@ export default {
   display: inline-block;
   vertical-align: bottom;
   -webkit-animation: ellipsis steps(4,end) 900ms infinite;
-  animation: ellipsis steps(4,end) 900ms infinite;
+  animation: ellipsis steps(4,end) 3000ms infinite;
   content: "\2026";
   width: 0px;
 }
