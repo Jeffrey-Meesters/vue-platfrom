@@ -1,0 +1,13 @@
+{
+    "short_name": "Jeffrey PWA",
+    "name": "Jeffrey's Progressive Web App!",
+    "icons": [
+        {
+            "src": "letter-j-icon.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        }
+    ],
+    "display": "standalone",
+    "start_url": "/?utm_source=homescreen"
+  }

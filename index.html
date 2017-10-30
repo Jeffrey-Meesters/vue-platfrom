@@ -2,21 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>default-platform</title>
     <script src="https://use.fontawesome.com/d5a57d23ed.js"></script>
+    <!-- <link rel="manifest" href="/static/manifest.json"> -->
+    <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>static/manifest.json">
 
-<style>
-  html,
-  body {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-  }
-</style>
+    <style>
+      html,
+      body {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+      }
+    </style>
 
   </head>
-  <body>
+  <body <%= htmlWebpackPlugin.options.serviceWorkerLoader %>>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script type=text/javascript src=/service-worker.js></script>
+
   </body>
 </html>

@@ -63,5 +63,4 @@ export default {
     position: relative;
     top: -100px;
 }
-
 </style>
