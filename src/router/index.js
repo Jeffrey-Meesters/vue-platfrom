@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HomePage from '@/components/HomePage'
 import HelloRoute from '@/components/HelloRoute'
+import NewsPage from '@/components/NewsPage'
 
 Vue.use(Router)
 
@@ -16,6 +17,11 @@ export default new Router({
       path: '/testroute',
       name: 'testRoute',
       component: HelloRoute
+    },
+    {
+      path: '/newspage',
+      name: 'newspage',
+      component: NewsPage
     }
   ]
 })

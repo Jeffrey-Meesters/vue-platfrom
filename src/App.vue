@@ -7,6 +7,7 @@
             </li>
             <li class="index-list-item is-active"><router-link to="/" class="index-link">Home</router-link></li>
             <li class="index-list-item"><router-link to="/testroute" class="index-link">Testroute</router-link></li>
+            <li class="index-list-item"><router-link to="/newspage" class="index-link">News</router-link></li>
             <li class="index-list-item"><a class="index-link" href="#3">3</a></li>
             <li class="index-list-item"><a class="index-link" href="#4">4</a></li>
         </ul>
