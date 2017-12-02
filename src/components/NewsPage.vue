@@ -25,7 +25,7 @@
 import NewsList from '@/elements/NewsList'
 import axios from 'axios'
 const config = {
-  KEY: 'e04c20c58e274d988bdb372bc2eaf6f8'
+  KEY: 'ADD YOUR OWN KEY!!'
 }
 const NYTBaseUrl = 'https://api.nytimes.com/svc/topstories/v2/'
 const ApiKey = config.KEY
