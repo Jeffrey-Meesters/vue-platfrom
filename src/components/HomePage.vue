@@ -1,7 +1,9 @@
 <template lang='pug'>
   .home
     .about-me
-      h1 Welcome,
+      h1 Welcome
+        input.name-input
+        | ,
       h2 To my entirely new build website!
       p
       | At the time of writing $(this) website I started exactly one year ago on a new journey.
@@ -34,7 +36,7 @@
     .stuff-to-do-div
       h4.boring Boringggg
       h4 So how to make this page interesting?!
-      <stars></stars>
+      stars
 
 </template>
 
@@ -48,30 +50,37 @@ export default {
       msg: ''
     }
   },
-  template: '<Stars/>',
   components: { Stars }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.home {
-  padding: 0px 1.25rem;
-}
+<style lang='sass' scoped>
+.home
+  padding: 0px 1.25rem
 
-.boring:after {
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: bottom;
-  -webkit-animation: ellipsis steps(4,end) 900ms infinite;
-  animation: ellipsis steps(4,end) 3000ms infinite;
-  content: "\2026";
-  width: 0px;
-}
+.name-input
+    height: 30px
+    position: relative
+    top: -5px
+    width: 25%
+    left: 4px
+    font-size: 16px
 
-@keyframes ellipsis {
-  to {
-    width: 30px;
-  }
-}
+.boring
+  margin-top: 10px
+
+  &:after
+    overflow: hidden
+    display: inline-block
+    vertical-align: bottom
+    -webkit-animation: ellipsis steps(4,end) 900ms infinite
+    animation: ellipsis steps(4,end) 3000ms infinite
+    content: "\2026"
+    width: 0px
+
+
+@keyframes ellipsis
+  to
+    width: 30px
 </style>
