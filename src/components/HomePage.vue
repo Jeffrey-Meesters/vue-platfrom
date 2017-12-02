@@ -2,8 +2,8 @@
   .home
     .about-me
       h1 Welcome
-        input.name-input(v-if="!isNameProvided" v-model="userName" placeholder="please provide your name && hit enter/return" @keyup.enter="yolo")
-        span.pos-rel(v-if="isNameProvided") &nbsp;{{userName}},
+        input.name-input(v-if="!isNameProvided" v-model="inputName" placeholder="please provide your name && hit enter/return" @keyup.enter="yolo")
+        span.pos-rel(v-if="isNameProvided") &nbsp;{{inputName}},
           .button-small(@click="newName") X
       h2 To my entirely new build website!
       p
@@ -44,14 +44,22 @@
 import Stars from '@/elements/Stars'
 
 export default {
+  computed: {
+    userName: function () {
+      return this.$store.state.userName
+    }
+  },
   created () {
-    console.log(this.$store)
+    if (this.userName) {
+      this.inputName = this.userName
+      this.isNameProvided = true
+    }
   },
   name: 'HomePage',
   data () {
     return {
       msg: '',
-      userName: '',
+      inputName: '',
       isNameProvided: false
     }
   },
@@ -60,7 +68,7 @@ export default {
     yolo () {
       console.log('enter!!')
       this.isNameProvided = true
-      this.$store.commit('updateUserName', this.userName)
+      this.$store.commit('updateUserName', this.inputName)
     },
     newName () {
       this.isNameProvided = false

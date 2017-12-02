@@ -25,7 +25,7 @@
 import NewsList from '@/elements/NewsList'
 import axios from 'axios'
 const config = {
-  KEY: 'ADD YOUR OWN API KEY!!!!!'
+  KEY: 'GET YOUR OWN API KEY!!!'
 }
 const NYTBaseUrl = 'https://api.nytimes.com/svc/topstories/v2/'
 const ApiKey = config.KEY
@@ -39,7 +39,7 @@ const SECTIONS = 'home, arts, automobiles, books, business, fashion, food, healt
 export default {
   computed: {
     userName: function () {
-      return this.$store.state.userName
+      return this.$store.getters.userName
     }
   },
   name: 'NewsPage',

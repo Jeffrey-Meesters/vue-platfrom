@@ -11,5 +11,8 @@ export default new Vuex.Store({
     updateUserName: (state, payload) => {
       state.userName = payload
     }
+  },
+  getters: {
+    userName: state => state.userName
   }
 })
