@@ -2,8 +2,9 @@
   .home
     .about-me
       h1 Welcome
-        input.name-input
-        | ,
+        input.name-input(v-if="!isNameProvided" v-model="userName" placeholder="please provide your name && hit enter/return" @keyup.enter="yolo")
+        span.pos-rel(v-if="isNameProvided") &nbsp;{{userName}},
+          .button-small(@click="newName") X
       h2 To my entirely new build website!
       p
       | At the time of writing $(this) website I started exactly one year ago on a new journey.
@@ -47,10 +48,21 @@ export default {
   name: 'HomePage',
   data () {
     return {
-      msg: ''
+      msg: '',
+      userName: '',
+      isNameProvided: false
     }
   },
-  components: { Stars }
+  components: { Stars },
+  methods: {
+    yolo () {
+      console.log('enter!!')
+      this.isNameProvided = true
+    },
+    newName () {
+      this.isNameProvided = false
+    }
+  }
 }
 </script>
 
@@ -79,6 +91,20 @@ export default {
     content: "\2026"
     width: 0px
 
+.pos-rel
+  position: relative
+
+.button-small
+    display: inline-block
+    position: absolute
+    background-color: red
+    height: 20px
+    width: 20px
+    font-size: 14px
+    text-align: center
+    color: white
+    top: 0px
+    right: -10px
 
 @keyframes ellipsis
   to

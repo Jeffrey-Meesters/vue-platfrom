@@ -5,7 +5,7 @@
             <li class="logo">
                 <i class="fa fa-superpowers" aria-hidden="true"></i>
             </li>
-            <li class="index-list-item is-active"><router-link to="/" class="index-link">Home</router-link></li>
+            <li class="index-list-item is-active"><router-link to="/home" class="index-link">Home</router-link></li>
             <li class="index-list-item"><router-link to="/testroute" class="index-link">Testroute</router-link></li>
             <li class="index-list-item"><router-link to="/newspage" class="index-link">News</router-link></li>
             <li class="index-list-item"><a class="index-link" href="#3">3</a></li>
@@ -78,7 +78,7 @@ a {
   transition: 1s;
 }
 
-.is-active {
+.router-link-exact-active {
   background-color: #a65353;
 }
 .is-active:hover {

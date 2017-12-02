@@ -8,9 +8,11 @@ import Page404 from '@/components/Page404'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
+      name: 'home',
       redirect: '/home'
     },
     {
