@@ -5,6 +5,11 @@ Vue.use(Vuex)
 /* eslint-disable */
 export default new Vuex.Store({
   state: {
-    count: 0
+    userName: ''
+  },
+  mutations: {
+    updateUserName: (state, payload) => {
+      state.userName = payload
+    }
   }
 })

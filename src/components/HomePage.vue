@@ -38,7 +38,6 @@
       h4.boring Boringggg
       h4 So how to make this page interesting?!
       stars
-
 </template>
 
 <script>
@@ -61,6 +60,7 @@ export default {
     yolo () {
       console.log('enter!!')
       this.isNameProvided = true
+      this.$store.commit('updateUserName', this.userName)
     },
     newName () {
       this.isNameProvided = false

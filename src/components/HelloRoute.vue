@@ -1,16 +1,21 @@
 <template lang='pug'>
 
   .hello-route
-    h1 {{msg}}
+    h1 Hi {{userName}}, {{msg}}
 
 </template>
 
 <script>
 export default {
+  computed: {
+    userName: function () {
+      return this.$store.state.userName
+    }
+  },
   name: 'HelloRoute',
   data () {
     return {
-      msg: 'This is my own route!!'
+      msg: 'This is my awesome route!!'
     }
   }
 }

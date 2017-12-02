@@ -1,6 +1,6 @@
 <template lang='pug'>
 	.news-list
-		h3.text-center VueNews
+		h3.text-center {{userName}} it is time for some VueNews!
 
 		section.callout.secondary
 			h5.text-center Filter by Category
@@ -37,6 +37,11 @@ function buildUrl (url) {
 const SECTIONS = 'home, arts, automobiles, books, business, fashion, food, health, insider, magazine, movies, national, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, tmagazine, travel, upshot, world' // From NYTimes
 
 export default {
+  computed: {
+    userName: function () {
+      return this.$store.state.userName
+    }
+  },
   name: 'NewsPage',
   data () {
     return {
