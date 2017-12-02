@@ -1,7 +1,8 @@
-<template>
-  <div class="hello-route">
-      <h1>{{msg}}</h1>
-  </div>
+<template lang='pug'>
+
+  .hello-route
+    h1 {{msg}}
+
 </template>
 
 <script>
@@ -15,11 +16,10 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: bold;
-  color: red;
-  text-shadow: 1px 1px 1px black;
-}
+<style lang='sass' scoped>
+h1,
+h2
+  font-weight: bold
+  color: blue
+  text-shadow: 1px 1px 1px black
 </style>

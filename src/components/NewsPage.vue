@@ -1,28 +1,23 @@
-<template>
-  <div class='news-list' >
-		<h3 class="text-center">VueNews</h3>
+<template lang='pug'>
+	.news-list
+		h3.text-center VueNews
 
-		<section class="callout secondary">
-			<h5 class="text-center">Filter by Category</h5>
-			<form>
-				<div class="row">
-					<div class="large-6 columns">
-						<select v-model="section">
-							<option v-for="section in sections" :value="section" :key='section'>{{ section }}</option>
-						</select>
-					</div>
-					<div class="medium-6 columns">
-						<a @click="getPosts(section)" class="button expanded">Retrieve</a>
-					</div>
-				</div>
-			</form>
-		</section>
+		section.callout.secondary
+			h5.text-center Filter by Category
+			form
+				.row
+					.large-6.columns
+						select(v-model="section")
+							option(v-for="section in sections" :value="section" :key='section') {{ section }}
 
-		<h5 class="text-center uppercase" v-if="!loading">{{ title }}</b></h5>
-		<div v-if="loading" class="loader"><img src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif" alt="loader"></div>
+					.medium-6.columns
+						a.button(@click="getPosts(section)") Retrieve
 
-		<news-list v-if="!loading" :results="results"></news-list>
-  </div>
+		h5.text-center.uppercase(v-if="!loading") {{ title }}
+		div.loader(v-if="loading")
+			img(src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif" alt="loader")
+
+		news-list(v-if="!loading" :results="results")
 </template>
 
 <script>
@@ -30,7 +25,7 @@
 import NewsList from '@/elements/NewsList'
 import axios from 'axios'
 const config = {
-  KEY: 'Replace with own key'
+  KEY: 'e04c20c58e274d988bdb372bc2eaf6f8'
 }
 const NYTBaseUrl = 'https://api.nytimes.com/svc/topstories/v2/'
 const ApiKey = config.KEY
@@ -55,7 +50,6 @@ export default {
   mounted () {
     this.getPosts('technology')
   },
-  template: '<news-list/>',
   components: { NewsList },
   methods: {
     getPosts (section) {

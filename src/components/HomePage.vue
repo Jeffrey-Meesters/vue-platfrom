@@ -1,32 +1,41 @@
-<template>
-  <div class="home">
-    <div class="about-me">
-      <h1>Welcome,</h1>
-      <h2>To my entirely new build website!</h2>
-      <p>
-        At the time of writing $(this) website I started exactly one year ago on a new journey.<br>
-        I quit working for a financial and decided to go into completely other direction: Web-development.<br>
-        Therefore I needed to re-school myself and so I did.
-      </p>
-      <p>
-        I found out about <a href="https://www.codaisseur.com/" target="_blank">Codaisseur</a>, went to their Open Evening,<br>
-        and shortly after they were teaching me the ways of the internet.<br>
-        In like eight weeks they learned me the basics and more.TODO MAKE THIS SLIDE LIST Pop-open COMPONENT<br>
-        By the end of 2016 I could call myself Junior Webdeveloper and three months later I found my first job.
-      </p>
-      <p>
-        Currently I'm working for <a href="http://project89109.nl/" target="_blank">Project89109.nl</a>.<br>
-        We are building websites with adult rated content.<br>
-        In the seven months I'm currently working here I've helped building 5 new websites and worked on at least twice that amount.<br>
-        If you'd be interested in the websites I've helped building feel free to contact me.
-      </p>
-    </div>
-    <div class="stuff-to-do-div">
-      <h2 class="boring">Boringggg</h2>
-      <h4>So how to make this page interesting?!</h4>
+<template lang='pug'>
+  .home
+    .about-me
+      h1 Welcome,
+      h2 To my entirely new build website!
+      p
+      | At the time of writing $(this) website I started exactly one year ago on a new journey.
+      br
+      | I quit working for a financial and decided to go into completely other direction: Web-development.
+      br
+      | Therefore I needed to re-school myself and so I did.
+
+      p
+      | I found out about &nbsp;
+      a(href="https://www.codaisseur.com/" target="_blank") Codaisseur,
+      |  went to their Open Evening,
+      br
+      | and shortly after they were teaching me the ways of the internet.
+      br
+      | In like eight weeks they learned me the basics and more.TODO MAKE THIS SLIDE LIST Pop-open COMPONENT
+      br
+      | By the end of 2016 I could call myself Junior Webdeveloper and three months later I found my first job.
+
+      p
+      | Currently I'm working for &nbsp;
+      a(href="http://project89109.nl/" target="_blank") Project89109.nl.
+      br
+      | We are building websites with adult rated content.
+      br
+      |  In the seven months I'm currently working here I've helped building 5 new websites and worked on at least twice that amount.
+      br
+      | If you'd be interested in the websites I've helped building feel free to contact me.
+
+    .stuff-to-do-div
+      h4.boring Boringggg
+      h4 So how to make this page interesting?!
       <stars></stars>
-    </div>
-  </div>
+
 </template>
 
 <script>

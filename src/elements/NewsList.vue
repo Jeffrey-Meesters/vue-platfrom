@@ -1,21 +1,15 @@
-<template>
-  <div class="news-list">
-    <section>
-      <div class="row" v-for="(posts, index) in processedPosts" :key='index'>
-        <div class="columns large-3 medium-6" v-for="(post, index) in posts" :key='index'>
-          <div class="card">
-          <div class="card-divider">
-          {{ post.title }}
-          </div>
-          <a :href="post.url" target="_blank"><img :src="post.image_url"></a>
-          <div class="card-section">
-            <p>{{ post.abstract }}</p>
-          </div>
-        </div>
-        </div>
-      </div>
-  </section>
-  </div>
+<template lang='pug'>
+  .news-list
+    section
+      .row(v-for="(posts, index) in processedPosts" :key='index')
+        .columns.large-3.medium-6(v-for="(post, index) in posts" :key='index')
+          .card
+          .card-divider {{ post.title }}
+
+          a(:href="post.url" target="_blank")
+            img(:src="post.image_url")
+          .card-section
+            p {{ post.abstract }}
 </template>
 
 <script>

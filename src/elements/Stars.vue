@@ -1,11 +1,9 @@
-<template>
-  <div class="stars">
-      <div class="star">
-        <div class="box-one"></div>
-        <div class="box-two"></div>
-        <div class="box-three"></div>
-    </div>
-  </div>
+<template lang='pug'>
+  .stars
+      .star
+        .box-one
+        .box-two
+        .box-three
 </template>
 
 <script>
