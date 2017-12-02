@@ -45,6 +45,9 @@
 import Stars from '@/elements/Stars'
 
 export default {
+  created () {
+    console.log(this.$store)
+  },
   name: 'HomePage',
   data () {
     return {
@@ -105,6 +108,7 @@ export default {
     color: white
     top: 0px
     right: -10px
+    cursor: pointer
 
 @keyframes ellipsis
   to
